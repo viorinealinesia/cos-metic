@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rin's Cosmetic — Premium Beauty & Body Care Edit</title>
+  <meta name="description" content="Rin's Cosmetic — Soft, premium, feminine beauty & body care essentials. Glow naturally with our curated collection of gentle formulas.">
+  <meta name="keywords" content="Rin's Cosmetic, skincare, body care, makeup, beauty, premium, Indonesia">
+  <meta name="author" content="Rin's Cosmetic">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://viorinealinesia.github.io/rin-scosmetic/">
+  <meta property="og:title" content="Rin's Cosmetic — Premium Beauty & Body Care Edit">
+  <meta property="og:description" content="Soft, premium, feminine beauty & body care essentials. Glow naturally with our curated collection.">
+  <meta property="og:image" content="https://viorinealinesia.github.io/rin-scosmetic/rins-cosmetic-collection.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Rin's Cosmetic">
+  <meta property="og:locale" content="id_ID">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rin's Cosmetic — Premium Beauty & Body Care Edit">
+  <meta name="twitter:description" content="Soft, premium, feminine beauty & body care essentials. Glow naturally.">
+  <meta name="twitter:image" content="https://viorinealinesia.github.io/rin-scosmetic/rins-cosmetic-collection.png">
+  
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<!-- ========== PAGE LOADER ========== -->
+<div class="page-loader" id="pageLoader">
+  <div class="loader-inner">
+    <div class="loader-logo">Rin's</div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+</div>
+
+<!-- ========== WELCOME SPLASH ========== -->
+<div class="welcome-splash" id="welcomeSplash">
+  <div class="welcome-content">
+    <p class="welcome-eyebrow">THE BODY & BEAUTY EDIT</p>
+    <h1 class="welcome-title">Selamat datang di<br><em>Rin's Cosmetic</em></h1>
+    <p class="welcome-desc">Soft, premium & feminine beauty untuk glow alami kamu.</p>
+    <button class="btn btn-primary" id="welcomeEnter" onclick="if(window.closeWelcome){closeWelcome();return false;}">Masuk ke Website <i class="fa-solid fa-arrow-right"></i></button>
+    <label class="welcome-skip"><input type="checkbox" id="welcomeDontShow"> Jangan tampilkan lagi</label>
+  </div>
+  <div class="welcome-bg"></div>
+</div>
+
+<!-- ========== NAVBAR ========== -->
+<header class="navbar" id="navbar">
+  <a class="logo" href="#home">
+    <span class="logo-main">Rin's</span>
+    <span class="logo-sub">COSMETIC</span>
+  </a>
+  
+  <nav class="nav-links" id="navLinks">
+    <a href="#home" class="nav-link active">Home</a>
+    <a href="#products" class="nav-link">Shop</a>
+    <a href="#bestsellers" class="nav-link">Best Seller</a>
+    <a href="#routine" class="nav-link">Routine</a>
+    <a href="#quiz" class="nav-link">Beauty Quiz</a>
+    <a href="#tips" class="nav-link">Tips</a>
+    <a href="#social" class="nav-link">Social</a>
+    <a href="#reviews" class="nav-link">Reviews</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+  </nav>
+  
+  <div class="nav-actions">
+    <button class="icon-btn search-toggle" id="searchToggle" aria-label="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    <button class="icon-btn" id="openWishlist" aria-label="Wishlist">
+      <i class="fa-regular fa-heart"></i>
+      <span class="badge-count" id="wishlistCount">0</span>
+    </button>
+    <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="icon-btn cart-btn" id="openCart" aria-label="Cart">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span class="badge-count" id="cartCount">0</span>
+    </button>
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Search Overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="searchInput" placeholder="Cari produk, kategori..." autocomplete="off">
+    <button class="close-search" id="closeSearch"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="search-results" id="searchResults"></div>
+</div>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">THE BODY & BEAUTY EDIT</p>
+    <h1>Glow Naturally,<br><em>Be More You.</em></h1>
+    <p class="hero-desc">Koleksi soft, premium & feminine untuk merawat kulit dan menonjolkan kecantikan alamu. Formula lembut yang nyaman dipakai setiap hari.</p>
+    <div class="hero-ctas">
+      <a href="#products" class="btn btn-primary">Shop Collection <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="#quiz" class="btn btn-outline">Find My Match ✨</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>5k+</strong><span>Happy Customers</span></div>
+      <div><strong>4.9</strong><span>Rating</span></div>
+      <div><strong>100%</strong><span>Gentle Formula</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-glow"></div>
+    <div class="hero-frame">
+      <img src="rins-cosmetic-collection.png" alt="Rin's Cosmetic Collection" loading="eager">
+    </div>
+  </div>
+</section>
+
+<!-- Promo Banner -->
+<div class="promo-banner" id="promoBanner">
+  <div class="promo-inner">
+    <i class="fa-solid fa-gift"></i>
+    <p><strong>WELCOME GIFT</strong> — Gunakan kode <span class="voucher-code" id="copyVoucher">RINLOVE15</span> untuk diskon 15% pertama kali belanja</p>
+    <button class="promo-close" id="closePromo" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+</div>
+
+<!-- Features -->
+<section class="features">
+  <div class="feature-item">
+    <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+    <div>
+      <b>Gentle Formula</b>
+      <span>Nyaman & aman untuk kulit sensitif</span>
+    </div>
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon"><i class="fa-solid fa-gem"></i></div>
+    <div>
+      <b>Premium Quality</b>
+      <span>Bahan pilihan untuk hasil maksimal</span>
+    </div>
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon"><i class="fa-solid fa-box-open"></i></div>
+    <div>
+      <b>Safe Packaging</b>
+      <span>Dikemas rapi & higienis</span>
+    </div>
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+    <div>
+      <b>Fast Shipping</b>
+      <span>Pengiriman ke seluruh Indonesia</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BEST SELLERS ========== -->
+<section class="section bestsellers" id="bestsellers">
+  <div class="section-header">
+    <p class="eyebrow">MOST LOVED</p>
+    <h2>Best Sellers</h2>
+    <p class="section-desc">Produk favorit yang paling sering dipilih beauty lovers</p>
+  </div>
+  <div class="product-grid" id="bestsellerGrid"></div>
+</section>
+
+<!-- ========== PRODUCTS / CATALOG ========== -->
+<section class="section products" id="products">
+  <div class="section-header">
+    <p class="eyebrow">OUR COLLECTION</p>
+    <h2>Beauty Essentials</h2>
+    <p class="section-desc">Pilihan soft & elegant untuk melengkapi beauty & body care routine kamu</p>
+  </div>
+  
+  <div class="catalog-controls">
+    <div class="category-filters" id="categoryFilters">
+      <button class="filter-btn active" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="Face Collection">Face</button>
+      <button class="filter-btn" data-cat="Skincare">Skincare</button>
+      <button class="filter-btn" data-cat="Lips Collection">Lips</button>
+      <button class="filter-btn" data-cat="Sun Care">Sun Care</button>
+      <button class="filter-btn" data-cat="Body Care">Body Care</button>
+    </div>
+    <div class="sort-wrap">
+      <select id="sortSelect" aria-label="Sort products">
+        <option value="default">Sort by</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="name">Name A–Z</option>
+        <option value="rating">Top Rated</option>
+      </select>
+    </div>
+  </div>
+  
+  <div class="product-grid" id="productGrid"></div>
+  <p class="no-results" id="noResults" hidden>Tidak ada produk yang cocok ✨</p>
+</section>
+
+<!-- ========== BEAUTY QUIZ ========== -->
+<section class="section quiz-section" id="quiz">
+  <div class="quiz-intro" id="quizIntro">
+    <p class="eyebrow">FIND YOUR MATCH</p>
+    <h2>Which Rin's product is <em>made for you?</em></h2>
+    <p>Jawab 3 pertanyaan singkat dan kami akan kasih rekomendasi produk yang paling cocok untuk kebutuhanmu.</p>
+    <button class="btn btn-primary" id="startQuiz">Mulai Quiz <i class="fa-solid fa-wand-magic-sparkles"></i></button>
+  </div>
+  
+  <div class="quiz-card" id="quizCard" hidden>
+    <div class="progress"><span id="progressBar"></span></div>
+    <p class="question-number" id="questionNumber">Question 1 of 3</p>
+    <h3 id="questionText">Apa yang paling ingin kamu fokuskan?</h3>
+    <div class="answers" id="answers"></div>
+    <div class="quiz-controls">
+      <button id="quizBack" class="text-btn" disabled>← Back</button>
+      <button id="quizNext" class="btn btn-primary">Next →</button>
+    </div>
+  </div>
+  
+  <div class="quiz-result" id="quizResult" hidden>
+    <span class="result-icon">♡</span>
+    <p class="eyebrow">Your Rin's Match</p>
+    <h3 id="resultName">Brightening Serum</h3>
+    <p id="resultDesc">Rekomendasi untukmu.</p>
+    <img id="resultImage" src="brightening-serum.jpg" alt="Rekomendasi produk">
+    <div class="result-actions">
+      <button id="resultAdd" class="btn btn-primary">Add to Cart</button>
+      <button id="quizAgain" class="btn btn-outline">Ulangi Quiz</button>
+    </div>
+  </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="section reviews" id="reviews">
+  <div class="section-header">
+    <p class="eyebrow">LOVED BY YOU</p>
+    <h2>Customer Reviews</h2>
+    <p class="section-desc">Cerita nyata dari beauty lovers yang sudah merasakan Rin's</p>
+  </div>
+  <div class="reviews-grid">
+    <article class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Cushion-nya ringan banget, hasilnya natural glow. Packaging juga cantik, cocok buat daily."</p>
+      <div class="review-author">
+        <div class="avatar">A</div>
+        <div>
+          <strong>Alya R.</strong>
+          <span>Airy Fit Cushion</span>
+        </div>
+      </div>
+    </article>
+    <article class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Serum ini bikin kulitku lebih cerah dalam 2 minggu. Wanginya soft dan nggak lengket."</p>
+      <div class="review-author">
+        <div class="avatar">D</div>
+        <div>
+          <strong>Dinda K.</strong>
+          <span>Brightening Serum</span>
+        </div>
+      </div>
+    </article>
+    <article class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Lip tint favorit! Warna velvet-nya cantik dan tahan lama. Recommended banget."</p>
+      <div class="review-author">
+        <div class="avatar">S</div>
+        <div>
+          <strong>Sari M.</strong>
+          <span>Velvet Lip Tint</span>
+        </div>
+      </div>
+    </article>
+    <article class="review-card">
+      <div class="review-stars">★★★★☆</div>
+      <p class="review-text">"Blush-nya soft pink, mudah di-blend. Cocok buat yang suka natural look."</p>
+      <div class="review-author">
+        <div class="avatar">R</div>
+        <div>
+          <strong>Rina P.</strong>
+          <span>Blooming Blush</span>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ========== BEAUTY ROUTINE BUILDER ========== -->
+<section class="section routine-section" id="routine">
+  <div class="section-header">
+    <p class="eyebrow">BUILD YOUR GLOW</p>
+    <h2>Beauty Routine Builder</h2>
+    <p class="section-desc">Pilih step routine kamu — kami bantu susun produk yang cocok</p>
+  </div>
+  <div class="routine-builder">
+    <div class="routine-steps" id="routineSteps">
+      <button class="routine-step active" data-step="cleanse"><i class="fa-solid fa-droplet"></i><span>Cleanse</span></button>
+      <button class="routine-step" data-step="treat"><i class="fa-solid fa-flask"></i><span>Treat</span></button>
+      <button class="routine-step" data-step="base"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Base</span></button>
+      <button class="routine-step" data-step="color"><i class="fa-solid fa-palette"></i><span>Color</span></button>
+      <button class="routine-step" data-step="protect"><i class="fa-solid fa-sun"></i><span>Protect</span></button>
+    </div>
+    <div class="routine-result" id="routineResult">
+      <div class="routine-card">
+        <img id="routineImg" src="brightening-serum.jpg" alt="">
+        <div>
+          <small id="routineStepLabel">Treat</small>
+          <h3 id="routineName">Brightening Serum</h3>
+          <p id="routineDesc">Serum pencerah gentle untuk kulit glowing.</p>
+          <button class="btn btn-sm btn-primary" id="routineAdd">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BEAUTY TIPS ========== -->
+<section class="section tips-section" id="tips">
+  <div class="section-header">
+    <p class="eyebrow">BEAUTY JOURNAL</p>
+    <h2>Tips & Insights</h2>
+    <p class="section-desc">Tips singkat biar glow kamu lebih maksimal</p>
+  </div>
+  <div class="tips-grid">
+    <article class="tip-card" data-tip="1">
+      <div class="tip-num">01</div>
+      <h3>Layer serum sebelum cushion</h3>
+      <p>Tunggu serum meresap 1–2 menit biar hasil cushion lebih smooth dan tahan lama.</p>
+      <button class="tip-more">Baca selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
+    </article>
+    <article class="tip-card" data-tip="2">
+      <div class="tip-num">02</div>
+      <h3>Lip tint + balm combo</h3>
+      <p>Pakai Velvet Lip Tint dulu, lalu layer lip balm tipis untuk hasil juicy natural.</p>
+      <button class="tip-more">Baca selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
+    </article>
+    <article class="tip-card" data-tip="3">
+      <div class="tip-num">03</div>
+      <h3>Sunscreen setiap hari</h3>
+      <p>SPF 50 bukan cuma buat ke pantai — paparan sinar di indoor tetap ada. Pakai tiap pagi.</p>
+      <button class="tip-more">Baca selengkapnya <i class="fa-solid fa-arrow-right"></i></button>
+    </article>
+  </div>
+</section>
+
+<!-- ========== SOCIAL MEDIA ========== -->
+<section class="section social-section" id="social">
+  <div class="section-header">
+    <p class="eyebrow">STAY CONNECTED</p>
+    <h2>Follow Our Journey</h2>
+    <p class="section-desc">Gabung komunitas Rin's di sosmed — tips, behind the scene & promo eksklusif</p>
+  </div>
+  <div class="social-grid">
+    <a class="social-card ig" href="https://instagram.com/" target="_blank" rel="noopener" id="linkIg">
+      <i class="fa-brands fa-instagram"></i>
+      <div>
+        <strong>Instagram</strong>
+        <span>@rins.cosmetic</span>
+      </div>
+      <i class="fa-solid fa-arrow-up-right-from-square social-ext"></i>
+    </a>
+    <a class="social-card tt" href="https://tiktok.com/" target="_blank" rel="noopener" id="linkTt">
+      <i class="fa-brands fa-tiktok"></i>
+      <div>
+        <strong>TikTok</strong>
+        <span>@rinscosmetic</span>
+      </div>
+      <i class="fa-solid fa-arrow-up-right-from-square social-ext"></i>
+    </a>
+    <a class="social-card wa" href="#" id="linkWaSocial">
+      <i class="fa-brands fa-whatsapp"></i>
+      <div>
+        <strong>WhatsApp</strong>
+        <span>Chat order & CS</span>
+      </div>
+      <i class="fa-solid fa-arrow-up-right-from-square social-ext"></i>
+    </a>
+    <a class="social-card shopee" href="https://shopee.co.id/" target="_blank" rel="noopener" id="linkShopee">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <div>
+        <strong>Shopee</strong>
+        <span>Official Store</span>
+      </div>
+      <i class="fa-solid fa-arrow-up-right-from-square social-ext"></i>
+    </a>
+  </div>
+  <div class="social-cta">
+    <p>Tag <strong>#RinsGlow</strong> di postingan kamu — kami sering repost favorit!</p>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="section about" id="about">
+  <div class="about-visual">
+    <img src="rins-cosmetic-collection.png" alt="About Rin's Cosmetic">
+  </div>
+  <div class="about-copy">
+    <p class="eyebrow">ABOUT RIN'S</p>
+    <h2>Beauty that feels <em>like you.</em></h2>
+    <p>Rin's Cosmetic hadir untuk memberikan pengalaman kecantikan yang sederhana, lembut, dan elegan. Makeup & body care bukan untuk mengubah dirimu, tetapi untuk menonjolkan kecantikan alami.</p>
+    <p>Setiap formula kami dirancang dengan perhatian pada kenyamanan kulit dan estetika yang timeless — soft, feminine, dan premium.</p>
+    <div class="about-values">
+      <div><i class="fa-solid fa-heart"></i> Soft & Gentle</div>
+      <div><i class="fa-solid fa-sparkles"></i> Premium Feel</div>
+      <div><i class="fa-solid fa-leaf"></i> Everyday Glow</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="section faq" id="faq">
+  <div class="section-header">
+    <p class="eyebrow">NEED HELP?</p>
+    <h2>Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-list" id="faqList">
+    <div class="faq-item">
+      <button class="faq-q">Bagaimana cara order di Rin's Cosmetic? <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a">
+        <p>Pilih produk yang kamu suka, masukkan ke keranjang, lalu checkout. Kamu bisa lanjut via WhatsApp untuk konfirmasi pesanan dengan mudah.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Apakah produk aman untuk kulit sensitif? <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a">
+        <p>Ya. Formula kami dirancang gentle dan nyaman. Namun, jika kamu memiliki alergi khusus, disarankan patch test terlebih dahulu.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Berapa lama pengiriman? <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a">
+        <p>Regular 2–3 hari, Express 1–2 hari, dan Same Day tersedia di area tertentu. Estimasi akan dikonfirmasi saat checkout via WhatsApp.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Bagaimana cara menggunakan kode voucher? <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a">
+        <p>Salin kode voucher (contoh: RINLOVE15) lalu sebutkan saat chat WhatsApp checkout. Tim kami akan langsung terapkan diskonnya.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Apakah bisa return / exchange? <i class="fa-solid fa-chevron-down"></i></button>
+      <div class="faq-a">
+        <p>Produk yang rusak saat pengiriman bisa diklaim dalam 3×24 jam setelah diterima. Hubungi kami via WhatsApp dengan foto bukti.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NEWSLETTER ========== -->
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <div>
+      <p class="eyebrow">STAY IN TOUCH</p>
+      <h2>Let's stay beautiful together.</h2>
+      <p>Dapatkan update produk baru, promo eksklusif, dan tips beauty langsung ke emailmu.</p>
+    </div>
+    <form id="subscribeForm" class="subscribe-form">
+      <input type="email" placeholder="Masukkan email kamu..." required>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="#home">
+        <span class="logo-main">Rin's</span>
+        <span class="logo-sub">COSMETIC</span>
+      </a>
+      <p>Soft beauty & body care essentials designed with love for your everyday glow.</p>
+      <div class="socials">
+        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" id="footerIg"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok" id="footerTt"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" aria-label="WhatsApp" id="footerWa"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://shopee.co.id/" target="_blank" rel="noopener" aria-label="Shopee" id="footerShopee"><i class="fa-solid fa-bag-shopping"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="#home">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#bestsellers">Best Seller</a>
+      <a href="#quiz">Beauty Quiz</a>
+      <a href="#about">About</a>
+    </div>
+    <div>
+      <h4>Help</h4>
+      <a href="#faq">FAQ</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#">Shipping</a>
+      <a href="#">Returns</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>hello@rinscosmetic.com</p>
+      <p>+62 812 3456 7890</p>
+      <p>Indonesia</p>
+    </div>
+  </div>
+  <div class="copyright">© 2026 Rin's Cosmetic. Made with ♡ — The Body & Beauty Edit</div>
+</footer>
+
+<!-- ========== CART SIDEBAR ========== -->
+<div class="overlay" id="overlay"></div>
+<aside class="cart-sidebar" id="cart">
+  <div class="sidebar-head">
+    <h2>Your Bag</h2>
+    <button id="closeCart" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-list" id="cartList">
+    <p class="empty-state">Your bag is still empty ♡</p>
+  </div>
+  <div class="cart-foot">
+    <div class="voucher-row">
+      <input type="text" id="voucherInput" placeholder="Kode voucher">
+      <button id="applyVoucher" class="btn btn-sm">Apply</button>
+    </div>
+    <div class="total-row">
+      <span>Subtotal</span>
+      <b id="cartSubtotal">Rp0</b>
+    </div>
+    <div class="total-row discount-row" id="discountRow" hidden>
+      <span>Diskon</span>
+      <b id="cartDiscount">-Rp0</b>
+    </div>
+    <div class="total-row grand">
+      <span>Total</span>
+      <b id="cartTotal">Rp0</b>
+    </div>
+    <button class="btn btn-primary full" id="checkoutBtn">Checkout via WhatsApp <i class="fa-brands fa-whatsapp"></i></button>
+    <button class="btn btn-outline full" id="continueShopping">Continue Shopping</button>
+  </div>
+</aside>
+
+<!-- ========== WISHLIST SIDEBAR ========== -->
+<aside class="cart-sidebar wishlist-sidebar" id="wishlist">
+  <div class="sidebar-head">
+    <h2>Wishlist</h2>
+    <button id="closeWishlist" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-list" id="wishlistList">
+    <p class="empty-state">Wishlist kamu masih kosong ♡</p>
+  </div>
+</aside>
+
+<!-- ========== PRODUCT DETAIL MODAL ========== -->
+<div class="modal" id="productModal">
+  <div class="modal-content product-detail">
+    <button class="modal-close" id="closeProductModal"><i class="fa-solid fa-xmark"></i></button>
+    <div class="detail-grid">
+      <div class="detail-image">
+        <img id="detailImg" src="" alt="">
+        <span class="badge" id="detailBadge" hidden></span>
+      </div>
+      <div class="detail-info">
+        <small id="detailCat"></small>
+        <h2 id="detailName"></h2>
+        <div class="detail-rating">
+          <span id="detailStars">★★★★★</span>
+          <em id="detailReviews">(0)</em>
+        </div>
+        <div class="detail-price" id="detailPrice"></div>
+        <p class="detail-desc" id="detailDesc"></p>
+        <div class="detail-actions">
+          <button class="btn btn-primary" id="detailAddCart"><i class="fa-solid fa-bag-shopping"></i> Add to Cart</button>
+          <button class="btn btn-outline" id="detailWishlist" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+          <button class="btn btn-outline" id="detailShare" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+        </div>
+        <div class="like-comment-section">
+          <div class="like-row">
+            <button class="like-btn" id="detailLike"><i class="fa-regular fa-heart"></i> <span id="likeCount">0</span> likes</button>
+          </div>
+          <div class="comments-box">
+            <h4>Komentar</h4>
+            <div class="comments-list" id="commentsList"></div>
+            <form class="comment-form" id="commentForm">
+              <input type="text" id="commentInput" placeholder="Tulis komentar..." maxlength="200" required>
+              <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== FLOATING WHATSAPP (Draggable) ========== -->
+<div class="floating-wa" id="floatingWa" title="Chat via WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat kami</span>
+</div>
+
+<!-- Tip Detail Modal -->
+<div class="modal" id="tipModal">
+  <div class="modal-content tip-modal-content">
+    <button class="modal-close" id="closeTipModal"><i class="fa-solid fa-xmark"></i></button>
+    <p class="eyebrow" id="tipModalNum">01</p>
+    <h2 id="tipModalTitle">Tip title</h2>
+    <div class="tip-modal-body" id="tipModalBody"></div>
+  </div>
+</div>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
